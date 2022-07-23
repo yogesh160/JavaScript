@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ButtonOnOff</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #imgContainer{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        #btn{
+            display: block;
+            margin: auto;
+            margin-top: 30px;
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: 700;
+            background: rgb(238, 241, 8);
+            color: #fff;
+            border: 2px solid rgb(233, 8, 109);
+        }
+        #btn:hover{
+            cursor: pointer;
+            background: rgb(246, 150, 6);
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="bulboff.jpg" alt="" id="imgContainer">
+    <button id="btn">Turn On</button>
+
+    <script>
+        var imgContainer = document.getElementById('imgContainer');
+        var btn = document.getElementById('btn');
+
+        btn.addEventListener('click', ButtonOnOff);
+
+        function ButtonOnOff(e){
+            if (btn.textContent.includes('On')) {
+                imgContainer.src = 'bulbon.jpg';
+                btn.textContent = 'Turn Off';
+            } else {
+                imgContainer.src = 'bulboff.jpg';
+                btn.textContent = 'Turn On';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,500;1,700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'poppins',sans-serif;
+}
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+.Card
+{
+position: relative;
+width: 350px;
+height: 85px;
+background-color: #398cc0;
+
+}
+.toggle
+{
+position: absolute;
+bottom: 60px;
+left: 50px;
+transform: translateX(-50%);
+width: 70px;
+height: 60px;
+background: #398cc0;
+border-bottom-left-radius: 35px;
+border-bottom-right-radius: 35px;
+cursor: pointer;
+}
+.toggle::before
+{
+    content: ;
+    position: absolute;
+    left: -34px;
+    width: 35px;
+    height: 35px;
+    background:#f00;
+    border-top-right-radius: 35px;
+    box-shadow: 11px -10px 0 10px #398cc0;
+    
+
+}
